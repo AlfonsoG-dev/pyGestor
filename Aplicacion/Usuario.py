@@ -19,13 +19,17 @@ class Usuario:
     def getUsuario(self):
         """
         Metodo para obtener el usuario
+        <pre>los usuarios ya se encuentran inicializados
+        <post>se toma el usuario de la cuenta
+        <return> el usuario de la cuenta 
         """
         return self._usuario
     @getUsuario.setter
     def setUsuario(self, nUsuairo):
         """
         Método para cambiar el nombre del usuario por el que llega por parametro
-        los usuarios ya se encuentran inicilizados
+        <pre> los usuarios ya se encuentran inicilizados
+        <post> se cambio el usuario por el usuario digitado
         nUsuario, es el usuario nuevo. nUsuario != None && nUsuario != ""
         """
         self._usuario = nUsuairo
@@ -33,15 +37,17 @@ class Usuario:
     def getContraseña(self):
         """
         Método para obtener la contraseña
+        <pre> la contraseña se encuentra inicializada 
+        <post> se toma la contraseña de la cuenta
+        <retur> la contraseña de la cuenta
         """
         return self._password
     @getContraseña.setter
     def setContraseña(self, nContraseña):
         """
         Metodo que permite cambiar la contraseña del usuario por parametro
-        los usurios ya se encuentran inicializados
+        <pre>los usurios ya se encuentran inicializados
+        <post> se cambio la contraseña por la que llega por parametro
         nContraseña, es la contrasela del usuario. nContraseña > 0 && nContraseña != None
-        se cambio la contraseña por la que llega por parametro
         """
         self._password = nContraseña
-
