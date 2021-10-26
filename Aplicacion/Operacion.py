@@ -1,3 +1,4 @@
+from rich import print as pt
 class Operacion:
     """ 
     Clase que permite el desarrollo de las consultas sql y mas
@@ -16,3 +17,4 @@ class Operacion:
     _UPDATE = 'update cuenta set usuario = %s, password = %s where identificador = %s'
     "eliminar una cuenta de la base de datos"
     _DELETE = 'delete from cuenta where identificador = %s'
+
