@@ -1,0 +1,4 @@
+09:31:24:24: DEBUG [Vitacora.py: 17] Mensaje para debugg
+09:31:24:24: INFO [Vitacora.py: 19] Mensaje de Error
+09:31:24:24: WARNING [Vitacora.py: 21] Mensaje de alerta
+09:31:24:24: CRITICAL [Vitacora.py: 23] Mensaje critico
