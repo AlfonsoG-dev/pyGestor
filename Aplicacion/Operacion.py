@@ -16,3 +16,6 @@ class Operacion:
     _UPDATE = 'update cuenta set usuario = %s, password = %s where identificador = %s'
     "eliminar una cuenta de la base de datos"
     _DELETE = 'delete from cuenta where identificador = %s'
+    @classmethod
+    def listaUsuario(cls):
+        pass
