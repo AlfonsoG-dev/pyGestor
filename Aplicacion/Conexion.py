@@ -7,23 +7,23 @@ import sys
 "Inicializar la clase"
 class Conexion:
     "Nombre de la base de datos"
-    _DATABASE = ''
+    _DATABASE = 'GestorP'
     "Nombre del usuario de la base de datos"
-    _USERNAME = ''
+    _USERNAME = 'postgres'
     "Contraseña de la base de datos"
-    _PASSWORD = ''
+    _PASSWORD = '5x5W12'
     "Puerto de la base de datos o el gestor?"
-    _DBPORT = ''
+    _DBPORT = '5432'
     "Host o equipo de la base de datos"
-    _HOST = ''
+    _HOST = 'localHost'
     "Minimo de conexiones"
-    _MIN = ''
+    _MIN = '1'
     "Maximo de conexiones"
-    _MAX = ''
+    _MAX = '5'
     "lista o pool de conexiones"
-    _POOL = ''
+    _POOL = None
     @classmethod
-    def darPool(cls):
+    def obtenerPool(cls):
         """ 
         Metodo para asignar la conexion a los usuarios que se conecten
         <pre>los atributos necesarios ya se encuentran inicializados 
@@ -45,13 +45,13 @@ class Conexion:
         else:
             return cls._POOL
     @classmethod
-    def darConexion(cls):
+    def obtenerConexion(cls):
         """ 
         Metodo para obtener la conexion del pool
         <pre> el pool ya se encuentra inicializado 
         <post> se obtine la conexion del pool
         """
-        conexion = cls.darPool().getconn()
+        conexion = cls.obtenerPool().getconn()
         log.debug(f"Conexion obtenida del pool:_ {conexion}")
         return conexion
     @classmethod
@@ -61,7 +61,7 @@ class Conexion:
         <pre> se asigno una conexion 
         <post> se libero la conexion asignada
         """
-        cls.darPool().putconn(conexion)
+        cls.obtenerPool().putconn(conexion)
         log.debug(f"Se libera la conexion y regresa al pool:_{conexion}")
     @classmethod
     def cerrarConexion(cls):
@@ -70,4 +70,4 @@ class Conexion:
         <pre> la conexion se encuentra inicializada 
         <post> se cerro la conexion
         """
-        cls.darPool().closeall()
+        cls.obtenerPool().closeall()
