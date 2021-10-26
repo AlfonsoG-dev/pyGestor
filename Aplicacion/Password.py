@@ -1,4 +1,4 @@
-class Usuario:
+class Password:
     """
     metodo que representa la inicialización de la clase usuario
     el usuario se encuentra en la base de datos este solo es una clase vacia
@@ -14,7 +14,7 @@ class Usuario:
         asigna los valores por parametro a las varibles del constructor
         """
         self._usuario = nUsuario
-        self._password = nContraseña
+        self._pasword = nContraseña
     @property
     def getUsuario(self):
         """
@@ -41,7 +41,7 @@ class Usuario:
         <post> se toma la contraseña de la cuenta
         <retur> la contraseña de la cuenta
         """
-        return self._password
+        return self._pasword
     @getContraseña.setter
     def setContraseña(self, nContraseña):
         """
@@ -50,4 +50,4 @@ class Usuario:
         <post> se cambio la contraseña por la que llega por parametro
         nContraseña, es la contrasela del usuario. nContraseña > 0 && nContraseña != None
         """
-        self._password = nContraseña
+        self._pasword = nContraseña
