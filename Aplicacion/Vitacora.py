@@ -8,7 +8,7 @@ import logging as log
 log.basicConfig(level=log.DEBUG, 
                 format='%(asctime)s: %(levelname)s [%(filename)s: %(lineno)s] %(message)s', 
                 datefmt='%I:%M:%S:%S', handlers=[
-                    log.FileHandler('DocumentoscapaDatos.log'),
+                    log.FileHandler('Documentos\capaDatos.log'),
                     log.StreamHandler()
                 ])
 "Reglas de la vitacora"
