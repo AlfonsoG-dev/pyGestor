@@ -1,8 +1,8 @@
 "importar la vitacora"
 from Vitacora import log
 "importal la clase conexion"
-from Conexion import Conexion
-class CursorPool:
+from Conexion import Conexion as cn
+class CursorDelPool:
     """ 
     Crear el cursor de las conexiones
     <pre>la clase conexion se encuentra inicializada 
@@ -22,8 +22,9 @@ class CursorPool:
         <pre>la clase conexion se encuentra inicializada
         <post> se obtiene el cursor """
         log.debug("Inicio del metodo wih")
-        self._conexion = Conexion.darConexion()
+        self._conexion = cn.obtenerConexion()
         self._cursor = self._conexion.cursor()
+        return self._cursor
     
     def __exit__(self, tipoExepcion, valorExcepcion, detalleException):
         """ 
@@ -33,9 +34,9 @@ class CursorPool:
         log.debug("Se ejecuta el cierre")
         if valorExcepcion:
             self._conexion.rollback()
-            log.error(f"Ocurrio un error, se hace tollback {valorExcepcion} {tipoExepcion}")
+            log.error(f"Ocurrio un error, se hace rollback {valorExcepcion} {tipoExepcion} {detalleException}")
         else:
             self._conexion.commit()
             log.debug("Commit de la transaccion")
         self._cursor.close()
-        Conexion.liberarConexion(self._conexion)
+        cn.liberarConexion(self._conexion)
