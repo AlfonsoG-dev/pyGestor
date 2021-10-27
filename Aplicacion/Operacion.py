@@ -77,10 +77,10 @@ class Operacion:
         Metodo para cambiar la informacion de la cuenta
         <pre> la base de datos se encuentra inicializada
         <post> se actualiza la informacion de la cuenta
-      S  cuenta, es la cuenta a actualizar. cuenta != "" && cuenta != None
+        cuenta, es la cuenta a actualizar. cuenta != "" && cuenta != None
         <return> mensaje de actualizacion con el id de la cuenta """
         with CursorDelPool() as cursor:
-            valores = (cuenta.getId, cuenta.getUsuario, cuenta.getContraseña)
+            valores = (cuenta.getUsuario, cuenta.getContraseña, cuenta.getId)
             cursor.execute(cls._UPDATE, valores)
             pt(f"Se actualizo la informacion de lacuenta: {cuenta.getId}")
             return cursor.rowcount
