@@ -1,4 +1,3 @@
-from PyQt5.QtWidgets import QMessageBox
 from rich import print as pt
 from Operacion import Operacion
 from Cuenta import miCuenta
