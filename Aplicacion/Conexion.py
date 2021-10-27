@@ -25,8 +25,8 @@ class Conexion:
     @classmethod
     def obtenerPool(cls):
         """ 
-        Metodo para asignar la conexion a los usuarios que se conecten
-        <pre>los atributos necesarios ya se encuentran inicializados 
+        Metodo para asignar la conexion a los usuarios de la aplicacion 
+        <pre>los atributos  database, user, password, port y host se encuentran declarados
         <post> se crean las conexiones
         """
         if cls._POOL is None:
