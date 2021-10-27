@@ -57,7 +57,7 @@ class Operacion:
                 cuentas.append(registro)
                 return cuentas
             else:
-                pt(f"Error al momento de cunsultar el usuario: {nId}")
+                pt(f"Error al momento de cunsultar el la cuenta identificadad con: {nId}")
     @classmethod
     def registrarCuenta(cls, cuenta):
         """ 
