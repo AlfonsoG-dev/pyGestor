@@ -1,17 +1,17 @@
 class miCuenta:
     """
-    metodo que representa la inicialización de la clase usuario
-    el usuario se encuentra en la base de datos este solo es una clase vacia
-    recibe como valores la cuenta y contraseña del usuario; no se utiliza un id para la tabla
-    Como es una clase para una cuenta personal no es necesario estructurara la base de datos
+    clase que representa la cuenta de la base de datos
+    la cuenta se encuentra en la base de datos esta solo es una clase local
+    recibe como valores el id de la cuenta, usuario y contraseña    
+    Como es una clase para una cuenta personal no es necesario estructurar la base de datos
     """
     def __init__(self, nIdentificador, nUsuario, nContraseña):
         """
-        Metodo constructor de la clase Usuario
-        los usuarios ya se encuentran en la base de datos
+        Metodo constructor de la clase cuenta
+        la cuenta se encuentran en la base de datos
         nIdentificador, es el tipo de cuenta. nIdentificador != "" && nIdentificador != None
-        nUsuario, es el usuario de la base de datos. nUsuario != None && nUsuario != ""
-        nContraseña, es la contraseña del usurario. nContraseña != None && nContraseña != ""
+        nUsuario, es el usuario de la cuentan. Usuario != None && nUsuario != ""
+        nContraseña, es la contraseña de la cuenta. nContraseña != None && nContraseña != ""
         asigna los valores por parametro a las varibles del constructor
         """
         self._id = nIdentificador
@@ -27,22 +27,22 @@ class miCuenta:
     def getId(self):
         """ 
         Metodo para obtenre la identificacion de la cuenta
-        <pre> los usuarios se encuentran inicializados
+        <pre> la cuenta se encuentra inicializada
         <post> se toma el identificador de la cuenta"""
         return self._id
     @getId.setter
     def setId(self, nIde):
         """ 
         Metodo para cambiar el valor de la identificacion
-        <pre> los usuarios se encuentran inicializados
+        <pre> la cuenta se encuentran inicializada
         <post> se cambia el valor del Id
         nIde, es el identificador de la base de datos. nIde != None && nIde != "" """
         self._id = nIde
     @property
     def getUsuario(self):
         """
-        Metodo para obtener el usuario
-        <pre>los usuarios ya se encuentran inicializados
+        Metodo para obtener el usuario de la cuenta  
+        <pre>la cuenta se encuentra inicializada
         <post>se toma el usuario de la cuenta
         <return> el usuario de la cuenta 
         """
@@ -50,8 +50,8 @@ class miCuenta:
     @getUsuario.setter
     def setUsuario(self, nUsuairo):
         """
-        Método para cambiar el nombre del usuario por el que llega por parametro
-        <pre> los usuarios ya se encuentran inicilizados
+        Método para cambiar el usuario de la cuenta por el que llega por parametro
+        <pre> la cuenta ya se encuentra inicilizada
         <post> se cambio el usuario por el usuario digitado
         nUsuario, es el usuario nuevo. nUsuario != None && nUsuario != ""
         """
