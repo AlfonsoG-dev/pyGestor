@@ -317,3 +317,77 @@
 07:50:01:01: DEBUG [Cursor.py: 34] Se ejecuta el cierre
 07:50:01:01: DEBUG [Cursor.py: 40] Commit de la transaccion
 07:50:01:01: DEBUG [Conexion.py: 65] Se libera la conexion y regresa al pool:_<connection object at 0x0000020FFFC607B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:08:08: DEBUG [Cursor.py: 24] Inicio del metodo wih
+08:01:08:08: DEBUG [Conexion.py: 40] Creacion de la conexion en pool:_ <psycopg2.pool.SimpleConnectionPool object at 0x0000024CD495F5B0>
+08:01:08:08: DEBUG [Conexion.py: 55] Conexion obtenida del pool:_ <connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:08:08: DEBUG [Cursor.py: 34] Se ejecuta el cierre
+08:01:08:08: DEBUG [Cursor.py: 40] Commit de la transaccion
+08:01:08:08: DEBUG [Conexion.py: 65] Se libera la conexion y regresa al pool:_<connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:10:10: DEBUG [Cursor.py: 24] Inicio del metodo wih
+08:01:10:10: DEBUG [Conexion.py: 55] Conexion obtenida del pool:_ <connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:10:10: DEBUG [Cursor.py: 34] Se ejecuta el cierre
+08:01:10:10: DEBUG [Cursor.py: 40] Commit de la transaccion
+08:01:10:10: DEBUG [Conexion.py: 65] Se libera la conexion y regresa al pool:_<connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:10:10: DEBUG [Cursor.py: 24] Inicio del metodo wih
+08:01:10:10: DEBUG [Conexion.py: 55] Conexion obtenida del pool:_ <connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:10:10: DEBUG [Cursor.py: 34] Se ejecuta el cierre
+08:01:10:10: DEBUG [Cursor.py: 40] Commit de la transaccion
+08:01:10:10: DEBUG [Conexion.py: 65] Se libera la conexion y regresa al pool:_<connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:12:12: DEBUG [Cursor.py: 24] Inicio del metodo wih
+08:01:12:12: DEBUG [Conexion.py: 55] Conexion obtenida del pool:_ <connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:12:12: DEBUG [Cursor.py: 34] Se ejecuta el cierre
+08:01:12:12: DEBUG [Cursor.py: 40] Commit de la transaccion
+08:01:12:12: DEBUG [Conexion.py: 65] Se libera la conexion y regresa al pool:_<connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:23:23: DEBUG [Cursor.py: 24] Inicio del metodo wih
+08:01:23:23: DEBUG [Conexion.py: 55] Conexion obtenida del pool:_ <connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:23:23: DEBUG [Cursor.py: 34] Se ejecuta el cierre
+08:01:23:23: DEBUG [Cursor.py: 40] Commit de la transaccion
+08:01:23:23: DEBUG [Conexion.py: 65] Se libera la conexion y regresa al pool:_<connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:23:23: DEBUG [Cursor.py: 24] Inicio del metodo wih
+08:01:23:23: DEBUG [Conexion.py: 55] Conexion obtenida del pool:_ <connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:23:23: DEBUG [Cursor.py: 34] Se ejecuta el cierre
+08:01:23:23: DEBUG [Cursor.py: 40] Commit de la transaccion
+08:01:23:23: DEBUG [Conexion.py: 65] Se libera la conexion y regresa al pool:_<connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:37:37: DEBUG [Cursor.py: 24] Inicio del metodo wih
+08:01:37:37: DEBUG [Conexion.py: 55] Conexion obtenida del pool:_ <connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:37:37: DEBUG [Cursor.py: 34] Se ejecuta el cierre
+08:01:37:37: DEBUG [Cursor.py: 40] Commit de la transaccion
+08:01:37:37: DEBUG [Conexion.py: 65] Se libera la conexion y regresa al pool:_<connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:37:37: DEBUG [Cursor.py: 24] Inicio del metodo wih
+08:01:37:37: DEBUG [Conexion.py: 55] Conexion obtenida del pool:_ <connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:37:37: DEBUG [Cursor.py: 34] Se ejecuta el cierre
+08:01:37:37: DEBUG [Cursor.py: 40] Commit de la transaccion
+08:01:37:37: DEBUG [Conexion.py: 65] Se libera la conexion y regresa al pool:_<connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:37:37: DEBUG [Cursor.py: 24] Inicio del metodo wih
+08:01:37:37: DEBUG [Conexion.py: 55] Conexion obtenida del pool:_ <connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:37:37: DEBUG [Cursor.py: 34] Se ejecuta el cierre
+08:01:37:37: DEBUG [Cursor.py: 40] Commit de la transaccion
+08:01:37:37: DEBUG [Conexion.py: 65] Se libera la conexion y regresa al pool:_<connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:43:43: DEBUG [Cursor.py: 24] Inicio del metodo wih
+08:01:43:43: DEBUG [Conexion.py: 55] Conexion obtenida del pool:_ <connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+08:01:43:43: DEBUG [Cursor.py: 34] Se ejecuta el cierre
+08:01:43:43: DEBUG [Cursor.py: 40] Commit de la transaccion
+08:01:43:43: DEBUG [Conexion.py: 65] Se libera la conexion y regresa al pool:_<connection object at 0x0000024CD45227B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+09:31:44:44: DEBUG [Cursor.py: 24] Inicio del metodo wih
+09:31:44:44: DEBUG [Conexion.py: 40] Creacion de la conexion en pool:_ <psycopg2.pool.SimpleConnectionPool object at 0x00000205B0FDF5B0>
+09:31:44:44: DEBUG [Conexion.py: 55] Conexion obtenida del pool:_ <connection object at 0x00000205B0AA27B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+09:31:44:44: DEBUG [Cursor.py: 34] Se ejecuta el cierre
+09:31:44:44: DEBUG [Cursor.py: 40] Commit de la transaccion
+09:31:44:44: DEBUG [Conexion.py: 65] Se libera la conexion y regresa al pool:_<connection object at 0x00000205B0AA27B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+09:32:07:07: DEBUG [Cursor.py: 24] Inicio del metodo wih
+09:32:07:07: DEBUG [Conexion.py: 40] Creacion de la conexion en pool:_ <psycopg2.pool.SimpleConnectionPool object at 0x000001971963F580>
+09:32:07:07: DEBUG [Conexion.py: 55] Conexion obtenida del pool:_ <connection object at 0x00000197191207B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+09:32:07:07: DEBUG [Cursor.py: 34] Se ejecuta el cierre
+09:32:07:07: DEBUG [Cursor.py: 40] Commit de la transaccion
+09:32:07:07: DEBUG [Conexion.py: 65] Se libera la conexion y regresa al pool:_<connection object at 0x00000197191207B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+09:33:06:06: DEBUG [Cursor.py: 24] Inicio del metodo wih
+09:33:06:06: DEBUG [Conexion.py: 40] Creacion de la conexion en pool:_ <psycopg2.pool.SimpleConnectionPool object at 0x000001EAE4D7E580>
+09:33:06:06: DEBUG [Conexion.py: 55] Conexion obtenida del pool:_ <connection object at 0x000001EAE48607B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+09:33:06:06: DEBUG [Cursor.py: 34] Se ejecuta el cierre
+09:33:06:06: DEBUG [Cursor.py: 40] Commit de la transaccion
+09:33:06:06: DEBUG [Conexion.py: 65] Se libera la conexion y regresa al pool:_<connection object at 0x000001EAE48607B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+09:33:21:21: DEBUG [Cursor.py: 24] Inicio del metodo wih
+09:33:21:21: DEBUG [Conexion.py: 55] Conexion obtenida del pool:_ <connection object at 0x000001EAE48607B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
+09:33:21:21: DEBUG [Cursor.py: 34] Se ejecuta el cierre
+09:33:21:21: DEBUG [Cursor.py: 40] Commit de la transaccion
+09:33:21:21: DEBUG [Conexion.py: 65] Se libera la conexion y regresa al pool:_<connection object at 0x000001EAE48607B0; dsn: 'user=postgres password=xxx dbname=GestorP host=localHost port=5432', closed: 0>
