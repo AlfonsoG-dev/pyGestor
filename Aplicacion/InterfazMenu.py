@@ -80,7 +80,7 @@ class Ui_GestorPassword(object):
         self.btnEliminar.setText(_translate("GestorPassword", "Eliminar"))
         self.btnListar.setText(_translate("GestorPassword", "Listar"))
         self.btnLimpiar.setText(_translate("GestorPassword", "Limpiar"))
-        self.lblError.setText(_translate("GestorPassword", "<html><head/><body><p align=\"center\">Error Log</p></body></html>"))
+        self.lblError.setText(_translate("GestorPassword", "<html><head/><body><p align=\"center\">Consol Log</p></body></html>"))
         self.txtError.setToolTip(_translate("GestorPassword", "<html><head/><body><p align=\"center\"><span style=\" text-decoration: underline; color:#aaaaff;\">dddddd</span></p></body></html>"))
 
 
