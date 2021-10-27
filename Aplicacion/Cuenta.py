@@ -9,6 +9,7 @@ class miCuenta:
         """
         Metodo constructor de la clase Usuario
         los usuarios ya se encuentran en la base de datos
+        nIdentificador, es el tipo de cuenta. nIdentificador != "" && nIdentificador != None
         nUsuario, es el usuario de la base de datos. nUsuario != None && nUsuario != ""
         nContraseña, es la contraseña del usurario. nContraseña != None && nContraseña != ""
         asigna los valores por parametro a las varibles del constructor
