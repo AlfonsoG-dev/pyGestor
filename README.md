@@ -7,3 +7,24 @@ Instrucciones </b>.
     - intalar la ultima version de postgres desde la pagina oficial. </b>
 3. Instalar el conector de python para postgresSQL.</p>
     - pip install psycopg2 <b>
+
+Intrucciones para la base de datos</b>.
+1. Ir a la clase Conexion e intercambiar los siguientes valores:/<p>
+    - DATABASE: nombre de la base de datos</b>
+    - USERNAME: usuario de la base de datos</b>
+    - PASSWORD: contraseña de la base de datos</b>
+    - DBPORT: puerto donde opera la base de datos</b>
+    - HOST: maquina host de la base de datos</b>
+    - MIN: valor minimo de conexiones</b>
+    - MAX: valor maximo de conexiones</b>
+    - POOL: pool de conexiones</b>
+2. utilizar postgres SQl con pgAdmin como gestor de base de datos</p>
+    - Crear una base de datos con el nombre de GestorP</b>
+    - Crear una tabla en la base de datos con el nombre de cuenta</b>
+    - Crear las columnas (id, usuario, contra)</b>
+        - id es el pk de la tabla
+        - usuario es el correo o usuario de una cuenta
+        - contra es la contraseña del correo o cuenta
+
+
+
