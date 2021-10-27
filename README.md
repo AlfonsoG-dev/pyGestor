@@ -25,3 +25,7 @@ Intrucciones para la base de datos</b>.
         - id es el pk de la tabla
         - usuario es el correo o usuario de una cuenta
         - contra es la contraseña del correo o cuenta
+3. Utilizar Qt designer para el desarrollo de la interfaz grafica</p>
+    - Cargar el archivo <interfazQT.ui> y editar si es que se quiere
+    - El archivo con extension ui se debe renderizar para python 
+    - Una ves renderizado lo pasas al directorio de aplicacion y reemplazas por <InterfazMenu.py> que es lo mismo
