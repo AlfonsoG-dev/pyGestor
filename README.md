@@ -25,6 +25,3 @@ Intrucciones para la base de datos</b>.
         - id es el pk de la tabla
         - usuario es el correo o usuario de una cuenta
         - contra es la contraseña del correo o cuenta
-
-
-
