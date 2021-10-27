@@ -87,6 +87,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_GestorPassword):
             self.txtError.setText(f"La cuenta con id: {cuentaEliminar.getId} y usuario : {cuentaEliminar.getUsuario} fue eliminada con exito")
         else:
             self.txtError.setText(f"La cuenta con id: {cuentaEliminar.getId} y usuario : {cuentaEliminar.getUsuario} no existe, pruebe con otro id")
+            pt(f"Error al tratar de eliminar la cuenta con el id: {cuentaEliminar.getId} tratar de consultar si la cuenta esta en la base de datos")
 """ 
  Menu de inicio de la interfaz"""
 if __name__ == "__main__":
