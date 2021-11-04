@@ -43,16 +43,14 @@ class MainWindow(QtWidgets.QMainWindow, Ui_GestorPassword):
         <post> se muestra en las casillas de texto el valor deseado"""
         cuentaBuscada = miCuenta(self.txtId.text(), self.txtUsuario.text(), self.txtPass.text())
         buscar = Operacion.consutlarCuenta(cuentaBuscada.getId)
-        if self.validarDatos is True:
-            if buscar != None:
-                for i in buscar:
-                    self.txtUsuario.setText(i[0])
-                    self.txtPass.setText(i[1])
+        if buscar != None:
+            for i in buscar:
+                self.txtUsuario.setText(i[0])
+                self.txtPass.setText(i[1])
                 self.txtError.setText(f"La cuenta con id: {cuentaBuscada.getId} fue encontrada con exito")
-            else:
-                self.txtError.setText(f"La cuenta con id: {cuentaBuscada.getId} no existe, pruebe con otro id")
         else:
-            self.txtError.setText(f"Error al validar los datos")            
+            self.txtError.setText(f"La cuenta con id: {cuentaBuscada.getId} no existe, pruebe con otro id")
+            
     def registrar(self):
         """ 
         Metodo que permite registrar una cuentra en la base de datos
@@ -110,7 +108,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_GestorPassword):
         id = self.txtId
         usuario = self.txtUsuario
         contraseña = self.txtPass
-        if id is None and usuario is None and contraseña is None:
+        if id is None:
             validacion = False 
         else:
             validacion = True
