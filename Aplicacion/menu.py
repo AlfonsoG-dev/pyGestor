@@ -43,13 +43,16 @@ class MainWindow(QtWidgets.QMainWindow, Ui_GestorPassword):
         <post> se muestra en las casillas de texto el valor deseado"""
         cuentaBuscada = miCuenta(self.txtId.text(), self.txtUsuario.text(), self.txtPass.text())
         buscar = Operacion.consutlarCuenta(cuentaBuscada.getId)
-        if buscar != None:
-            for i in buscar:
-                self.txtUsuario.setText(i[0])
-                self.txtPass.setText(i[1])
-            self.txtError.setText(f"La cuenta con id: {cuentaBuscada.getId} fue encontrada con exito")
+        if self.validarDatos is True:
+            if buscar != None:
+                for i in buscar:
+                    self.txtUsuario.setText(i[0])
+                    self.txtPass.setText(i[1])
+                self.txtError.setText(f"La cuenta con id: {cuentaBuscada.getId} fue encontrada con exito")
+            else:
+                self.txtError.setText(f"La cuenta con id: {cuentaBuscada.getId} no existe, pruebe con otro id")
         else:
-            self.txtError.setText(f"La cuenta con id: {cuentaBuscada.getId} no existe, pruebe con otro id")
+            self.txtError.setText(f"Error al validar los datos")            
     def registrar(self):
         """ 
         Metodo que permite registrar una cuentra en la base de datos
@@ -58,11 +61,14 @@ class MainWindow(QtWidgets.QMainWindow, Ui_GestorPassword):
         """
         cuentaRegistrar= miCuenta(self.txtId.text(), self.txtUsuario.text(), self.txtPass.text())
         busqueda = Operacion.consutlarCuenta(cuentaRegistrar.getId)
-        if busqueda == None:
-            Operacion.registrarCuenta(cuentaRegistrar)
-            self.txtError.setText(f"La cuenta con id: {cuentaRegistrar.getId} fue registrada con exito")
+        if self.validarDatos is True:
+            if busqueda is None:
+                Operacion.registrarCuenta(cuentaRegistrar)
+                self.txtError.setText(f"La cuenta con id: {cuentaRegistrar.getId} fue registrada con exito")
+            else:
+                self.txtError.setText(f"La cuenta con id: {cuentaRegistrar.getId} ya existe, pruebe con otro id")
         else:
-            self.txtError.setText(f"La cuenta con id: {cuentaRegistrar.getId} ya existe, pruebe con otro id")
+            self.txtError.setText(f"Error al validar los datos")
     def cambiar(self):
         """ 
         Metodo que permite cambiar los valores de la cuenta
@@ -70,11 +76,14 @@ class MainWindow(QtWidgets.QMainWindow, Ui_GestorPassword):
         <post> se cambia la informacion de la cuenta """
         cuentaActualizar= miCuenta(self.txtId.text(), self.txtUsuario.text(), self.txtPass.text())
         busqueda = Operacion.consutlarCuenta(cuentaActualizar.getId)
-        if busqueda != None:
-            Operacion.actualizarCuenta(cuentaActualizar)
-            self.txtError.setText(f"La información de la cuenta con id: {cuentaActualizar.getId} y usuario : {cuentaActualizar.getUsuario} fue actualizada con exito con exito")
+        if self.validarDatos is True:
+            if busqueda != None:
+                Operacion.actualizarCuenta(cuentaActualizar)
+                self.txtError.setText(f"La información de la cuenta con id: {cuentaActualizar.getId} y usuario : {cuentaActualizar.getUsuario} fue actualizada con exito con exito")
+            else:
+                self.txtError.setText(f"La cuenta con id: {cuentaActualizar.getId} No existe, pruebe con otro id")
         else:
-            self.txtError.setText(f"La cuenta con id: {cuentaActualizar.getId} No existe, pruebe con otro id")
+            self.txtError.setText(f"Error al validar los datos")
     def eliminar(self):
         """ 
         metodo que permite eliminar una cuenta de la base de datos
@@ -82,12 +91,31 @@ class MainWindow(QtWidgets.QMainWindow, Ui_GestorPassword):
         <post> se elimina la cuenta de la base de datos """
         cuentaEliminar= miCuenta(self.txtId.text(), self.txtUsuario.text(), self.txtPass.text())
         busqueda = Operacion.consutlarCuenta(cuentaEliminar.getId)
-        if busqueda != None:
-            Operacion.eliminarCuenta(cuentaEliminar.getId)
-            self.txtError.setText(f"La cuenta con id: {cuentaEliminar.getId} y usuario : {cuentaEliminar.getUsuario} fue eliminada con exito")
+        if self.validarDatos is True:
+            if busqueda != None:
+                Operacion.eliminarCuenta(cuentaEliminar.getId)
+                self.txtError.setText(f"La cuenta con id: {cuentaEliminar.getId} y usuario : {cuentaEliminar.getUsuario} fue eliminada con exito")
+            else:
+                self.txtError.setText(f"La cuenta con id: {cuentaEliminar.getId} y usuario : {cuentaEliminar.getUsuario} no existe, pruebe con otro id")
         else:
-            self.txtError.setText(f"La cuenta con id: {cuentaEliminar.getId} y usuario : {cuentaEliminar.getUsuario} no existe, pruebe con otro id")
-            pt(f"Error al tratar de eliminar la cuenta con el id: {cuentaEliminar.getId} tratar de consultar si la cuenta esta en la base de datos")
+            self.txtError.setText(f"Error al validar los datos")
+    def validarDatos(self):
+        """ 
+        Metodo para validar los elementos de la interfaz
+        <pre> la interfaz se encuentra inicializada
+        <post> se validan los elementos de la interfaz
+        @return verdadero si los elementos cumplen la condidición, de lo contratio false
+         """
+        validacion = None
+        id = self.txtId
+        usuario = self.txtUsuario
+        contraseña = self.txtPass
+        if id is None and usuario is None and contraseña is None:
+            validacion = False 
+        else:
+            validacion = True
+        return validacion
+            
 """ 
  Menu de inicio de la interfaz"""
 if __name__ == "__main__":
