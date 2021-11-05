@@ -1,5 +1,5 @@
 "importar la vitacora"
-from Vitacora import log
+"from Vitacora import log"
 "importal la clase conexion"
 from Conexion import Conexion as cn
 class CursorDelPool:
@@ -21,7 +21,6 @@ class CursorDelPool:
         Metodo para crear el cursor y obtenerlo
         <pre>la clase conexion se encuentra inicializada
         <post> se obtiene el cursor """
-        log.debug("Inicio del metodo wih")
         self._conexion = cn.obtenerConexion()
         self._cursor = self._conexion.cursor()
         return self._cursor
@@ -31,12 +30,9 @@ class CursorDelPool:
         se crea el metodo de salida
         <pre> las clases se encuentran inicializadas
         <post> se cierra el cursor """
-        log.debug("Se ejecuta el cierre")
         if valorExcepcion:
             self._conexion.rollback()
-            log.error(f"Ocurrio un error, se hace rollback {valorExcepcion} {tipoExepcion} {detalleException}")
         else:
             self._conexion.commit()
-            log.debug("Commit de la transaccion")
         self._cursor.close()
         cn.liberarConexion(self._conexion)
