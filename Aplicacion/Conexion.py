@@ -1,5 +1,5 @@
 "importar la vitacora de registros"
-from Vitacora import log
+"from Vitacora import log"
 "importar el moduo de conexion a la base de datos postgres SQL"
 from psycopg2 import pool
 "importar sys"
@@ -37,10 +37,8 @@ class Conexion:
                 password = cls._PASSWORD,
                 port = cls._DBPORT,
                 database = cls._DATABASE)
-                log.debug(f"Creacion de la conexion en pool:_ {cls._POOL}")
                 return cls._POOL
             except Exception as e:
-                log.error(f"Ocurrio un error al obtener la conexion del pool:_ {cls._POOL}")
                 sys.exit()
         else:
             return cls._POOL
@@ -52,7 +50,6 @@ class Conexion:
         <post> se obtine la conexion del pool
         """
         conexion = cls.obtenerPool().getconn()
-        log.debug(f"Conexion obtenida del pool:_ {conexion}")
         return conexion
     @classmethod
     def liberarConexion(cls, conexion):
@@ -61,8 +58,7 @@ class Conexion:
         <pre> se asigno una conexion 
         <post> se libero la conexion asignada
         """
-        cls.obtenerPool().putconn(conexion)
-        log.debug(f"Se libera la conexion y regresa al pool:_{conexion}")
+        cls.obtenerPool().putconn(conexion)        
     @classmethod
     def cerrarConexion(cls):
         """ 
