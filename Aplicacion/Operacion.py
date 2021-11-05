@@ -1,5 +1,3 @@
-"mejorar presentacion"
-from rich import print as pt
 "importar conexion"
 from Conexion import Conexion
 "importar cursor"
@@ -7,7 +5,7 @@ from Cursor import CursorDelPool
 "importar la clase cuenta"
 from Cuenta import miCuenta
 "importar vitacora"
-from Vitacora import log
+"from Vitacora import log"
 class Operacion:
     """ 
     Clase que permite el desarrollo de las consultas sql y mas
@@ -57,7 +55,7 @@ class Operacion:
                 cuentas.append(registro)
                 return cuentas
             else:
-                pt(f"Error al momento de cunsultar el la cuenta identificadad con: {nId}")
+                print(f"Error al momento de cunsultar el la cuenta identificadad con: {nId}")
     @classmethod
     def registrarCuenta(cls, cuenta):
         """ 
@@ -69,7 +67,6 @@ class Operacion:
         with CursorDelPool() as cursor:
             valores = (cuenta.getId, cuenta.getUsuario, cuenta.getContraseña)
             cursor.execute(cls._INSERT, valores)
-            pt(f"Se registro la cuenta: {cuenta.getId}")
             return cursor.rowcount
     @classmethod
     def actualizarCuenta(cls, cuenta):
@@ -82,7 +79,6 @@ class Operacion:
         with CursorDelPool() as cursor:
             valores = (cuenta.getUsuario, cuenta.getContraseña, cuenta.getId)
             cursor.execute(cls._UPDATE, valores)
-            pt(f"Se actualizo la informacion de lacuenta: {cuenta.getId}")
             return cursor.rowcount
     @classmethod
     def eliminarCuenta(cls, nId):
@@ -94,5 +90,4 @@ class Operacion:
         <return> mensaje de eliminacion con el id de la cuenta """
         with CursorDelPool() as cursor:
             cursor.execute(cls._DELETE, (nId,))
-            pt(f"Se elimino la cuenta: {nId}")
             return cursor.rowcount
