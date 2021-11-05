@@ -1,4 +1,3 @@
-from rich import print as pt
 from Operacion import Operacion
 from Cuenta import miCuenta
 from InterfazMenu import *
