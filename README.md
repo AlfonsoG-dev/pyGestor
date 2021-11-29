@@ -1,4 +1,4 @@
-# <b> GestorPassword </b>
+# <h1> GestorPassword </h1>
 Proyecto en python para la creacion de un gestor de contraseñas.</p> 
 Instrucciones </b>. 
 1. Instalar el interprete de python</p>
@@ -7,7 +7,6 @@ Instrucciones </b>.
     - intalar la ultima version de postgres desde la pagina oficial. </b>
 3. Instalar el conector de python para postgresSQL.</p>
     - pip install psycopg2 <b>
-
 Intrucciones para la base de datos</b>.
 1. Ir a la clase Conexion e intercambiar los siguientes valores.</p>
     - DATABASE: nombre de la base de datos</b>
