@@ -22,6 +22,7 @@ class Conexion:
     _MAX = '5'
     "lista o pool de conexiones"
     _POOL = None
+
     @classmethod
     def obtenerPool(cls):
         """ 
@@ -39,6 +40,7 @@ class Conexion:
                 database = cls._DATABASE)
                 return cls._POOL
             except Exception as e:
+                print(e)
                 sys.exit()
         else:
             return cls._POOL

@@ -1,5 +1,5 @@
 "importar la vitacora"
-"from Vitacora import log"
+from Vitacora import log
 "importal la clase conexion"
 from Conexion import Conexion as cn
 class CursorDelPool:
